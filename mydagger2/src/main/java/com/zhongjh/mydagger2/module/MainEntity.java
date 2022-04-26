@@ -1,11 +1,16 @@
-package com.zhongjh.mydefault;
+package com.zhongjh.mydagger2.module;
+
+import javax.inject.Inject;
 
 /**
  * @author zhongjh
  * @date 2022/4/24
  */
-public class MainParameter {
-    public MainParameter() {
+public class MainEntity {
+
+    @Inject
+    public MainEntity(String name) {
+        this.name = name;
     }
 
     private String name;

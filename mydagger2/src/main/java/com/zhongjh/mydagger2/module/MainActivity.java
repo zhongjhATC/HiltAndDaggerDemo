@@ -17,7 +17,7 @@ import javax.inject.Inject;
 public class MainActivity extends AppCompatActivity {
 
     @Inject
-    MainParameter mainParameter;
+    MainEntity mainEntity;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
         DaggerMainComponent.builder().mainModule(new MainModule("参数")).build().inject(this);
 
-        ((TextView) findViewById(R.id.tvName)).append("_" + mainParameter.getName());
+        ((TextView) findViewById(R.id.tvName)).append("_" + mainEntity.getName());
     }
-
-
 }

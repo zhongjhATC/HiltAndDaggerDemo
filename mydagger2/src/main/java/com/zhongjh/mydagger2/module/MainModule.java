@@ -17,8 +17,8 @@ public class MainModule {
     }
 
     @Provides
-    MainParameter provideMainParameter() {
-        return new MainParameter(name);
+    MainEntity provideMainParameter() {
+        return new MainEntity(name);
     }
 
 }

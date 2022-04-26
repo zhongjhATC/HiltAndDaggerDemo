@@ -23,14 +23,9 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         DaggerMainComponent.builder().build().inject(this);
         mainEntity.setName("名称");
         mainEntity.getMainParameter().setName("名称2");
-
-
         ((TextView) findViewById(R.id.tvName)).append(mainEntity.getName() + "_" + mainEntity.getMainParameter().getName());
     }
-
-
 }
