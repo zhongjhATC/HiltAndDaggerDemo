@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HiltDemo">
         <activity
-            android:name=".noarguments.MainActivity"
+            android:name=".havearguments.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
